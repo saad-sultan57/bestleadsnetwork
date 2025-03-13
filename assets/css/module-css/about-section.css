@@ -51,10 +51,6 @@
 
 
 
-
-
-
-
 .about-style1__image .inner {
     position: relative;
     display: block;
@@ -511,4 +507,460 @@
 
 .about-style2__content--in-about-style3 .inner-content ul {
     padding-top: 38px;
+}
+
+/*** 
+=============================================
+    About Services Area Css   
+=============================================
+***/
+.about-services-area {
+    position: relative;
+    display: block;
+    padding: 120px 0 90px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.about-services-area .sec-title {
+    margin-bottom: 60px;
+}
+
+.about-services-area .title-shape {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 15px;
+    margin-bottom: 20px;
+}
+
+.about-services-area .title-shape .shape-left,
+.about-services-area .title-shape .shape-right {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--thm-base);
+}
+
+.about-services-area .title-shape .shape-left {
+    left: 50%;
+    margin-left: -100px;
+    transform: rotate(-45deg);
+}
+
+.about-services-area .title-shape .shape-right {
+    right: 50%;
+    margin-right: -100px;
+    transform: rotate(45deg);
+}
+
+.about-services-area .sec-title .main-title {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--thm-black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-services-area .sec-title .sub-title h3 {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--thm-base);
+    margin: 0;
+}
+
+.single-service-box {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    z-index: 1;
+    min-height: 350px;
+}
+
+.single-service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--thm-base) 0%, var(--thm-black) 100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.single-service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.single-service-box:hover::before {
+    opacity: 1;
+}
+
+.single-service-box .icon-box {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(var(--thm-base-rgb), 0.1);
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: all 0.5s ease;
+}
+
+.single-service-box:hover .icon-box {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotateY(360deg);
+}
+
+.single-service-box .icon-box .service-icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--thm-base);
+    transition: all 0.5s ease;
+}
+
+.single-service-box:hover .icon-box .service-icon {
+    fill: #ffffff;
+}
+
+.single-service-box h3 {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--thm-black);
+    transition: all 0.5s ease;
+}
+
+.single-service-box:hover h3 {
+    color: #ffffff;
+}
+
+.single-service-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--thm-gray);
+    transition: all 0.5s ease;
+}
+
+.single-service-box:hover p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.single-service-box .hover-box {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.single-service-box:hover .hover-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.single-service-box .hover-box .circle-shape {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.single-service-box .hover-box .read-more {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.single-service-box .hover-box .read-more i {
+    position: relative;
+    display: inline-block;
+    padding-left: 5px;
+    transition: all 0.5s ease;
+}
+
+.single-service-box .hover-box .read-more:hover i {
+    padding-left: 10px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*** 
+=============================================
+    Company Values Area Css   
+=============================================
+***/
+.company-values-area {
+    position: relative;
+    display: block;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    overflow: hidden;
+}
+
+.company-values-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/pattern/pattern-1.png') repeat;
+    opacity: 0.03;
+    animation: backgroundMove 20s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.company-values-area .sec-title {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.company-values-area .sec-title .main-title {
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(to right, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.company-values-area .sec-title .main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--thm-base);
+    border-radius: 2px;
+}
+
+.single-value-box {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    min-height: 280px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.single-value-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--thm-base-rgb), 0.15) 0%, rgba(41, 49, 79, 0.15) 100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.single-value-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -1;
+    transform: translate(-100%, -100%);
+}
+
+.single-value-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(var(--thm-base-rgb), 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.single-value-box:hover::before {
+    opacity: 1;
+}
+
+.single-value-box:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.single-value-box .icon-box {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.single-value-box:hover .icon-box {
+    background: rgba(var(--thm-base-rgb), 0.1);
+    transform: rotateY(180deg);
+    border-color: rgba(var(--thm-base-rgb), 0.2);
+}
+
+.single-value-box .icon-box .value-icon {
+    width: 35px;
+    height: 35px;
+    fill: var(--thm-base);
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 8px rgba(var(--thm-base-rgb), 0.3));
+}
+
+.single-value-box:hover .icon-box .value-icon {
+    fill: #ffffff;
+    transform: rotateY(-180deg);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+}
+
+.single-value-box h3 {
+    position: relative;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.single-value-box:hover h3 {
+    background: linear-gradient(to right, #ffffff, var(--thm-base));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.single-value-box p {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.single-value-box:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.single-value-box {
+    animation: float-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.single-value-box:nth-child(1) { animation-delay: 0.1s; }
+.single-value-box:nth-child(2) { animation-delay: 0.2s; }
+.single-value-box:nth-child(3) { animation-delay: 0.3s; }
+.single-value-box:nth-child(4) { animation-delay: 0.4s; }
+.single-value-box:nth-child(5) { animation-delay: 0.5s; }
+.single-value-box:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .company-values-area .sec-title .main-title {
+        font-size: 30px;
+    }
+    .single-value-box {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+    .single-value-box .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    .single-value-box .icon-box .value-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .single-value-box h3 {
+        font-size: 20px;
+    }
+    .single-value-box p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 767px) {
+    .company-values-area {
+        padding: 60px 0;
+    }
+    .company-values-area .sec-title .main-title {
+        font-size: 26px;
+    }
+    .single-value-box {
+        padding: 20px 15px;
+    }
 }

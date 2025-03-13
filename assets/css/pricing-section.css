@@ -1,0 +1,142 @@
+.pricing-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 35px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: #20BAD1;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #20BAD1, #1a9eb1);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover::before {
+    opacity: 1;
+}
+
+.pricing-card h3 {
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: #222;
+    font-weight: 600;
+}
+
+.pricing-card .subtitle {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.pricing-card .price {
+    font-size: 42px;
+    color: #20BAD1;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.pricing-card .price-period {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.pricing-features li {
+    padding: 6px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.pricing-features li i {
+    color: #20BAD1;
+    margin-right: 8px;
+    font-size: 14px;
+    background: rgba(32, 186, 209, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff;
+    color: #20BAD1;
+    border: 2px solid #20BAD1;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.learn-more-btn:hover {
+    background: #20BAD1;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Add animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pricing-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.pricing-card:nth-child(4) {
+    animation-delay: 0.6s;
+} 
